@@ -25,7 +25,7 @@ public class StatsService {
         int number = 0;
         int currentMax = monthlySales[0];
         for (int sale : monthlySales) {
-            number ++;
+            number++;
             if (currentMax <= sale) {
                 currentMax = sale;
                 numberMax = number;

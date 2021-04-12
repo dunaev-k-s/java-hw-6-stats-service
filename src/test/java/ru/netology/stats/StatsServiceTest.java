@@ -19,35 +19,35 @@ class StatsServiceTest {
     void calculateAverageSale() {
         double expected = 15;
         double actual = service.calculateAverageSale(monthlySales);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     void calculateNumberLastMaxSale() {
         int expected = 8;
         int actual = service.calculateNumberLastMaxSale(monthlySales);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     void calculateNumberLastMinSale() {
         int expected = 9;
-        int actual= service.calculateNumberLastMinSale(monthlySales);
-        assertEquals(expected,actual);
+        int actual = service.calculateNumberLastMinSale(monthlySales);
+        assertEquals(expected, actual);
     }
 
     @Test
     void calculateQuantityBelowAverage() {
         int expected = 5;
         int actual = service.calculateQuantityBelowAverage(monthlySales);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     void calculateQuantityAboveAverage() {
         int expected = 5;
         int actual = service.calculateQuantityAboveAverage(monthlySales);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
 
     }
 }
