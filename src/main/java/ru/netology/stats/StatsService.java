@@ -12,11 +12,8 @@ public class StatsService {
 
     public double calculateAverageSale(int[] monthlySales) {
         int arrayLength = monthlySales.length;
-        int sum = 0;
         double average = 0;
-        for (int sale : monthlySales) {
-            average = calculateSumForSales(monthlySales) / arrayLength;
-        }
+        average = calculateSumForSales(monthlySales) / arrayLength;
         return average;
     }
 
@@ -50,8 +47,9 @@ public class StatsService {
 
     public int calculateQuantityBelowAverage(int[] monthlySales) {
         int numberBelowAverage = 0;
+        double average = calculateAverageSale(monthlySales);
         for (int sale : monthlySales) {
-            if (calculateAverageSale(monthlySales) > sale) {
+            if (average > sale) {
                 numberBelowAverage++;
             }
         }
@@ -60,8 +58,9 @@ public class StatsService {
 
     public int calculateQuantityAboveAverage(int[] monthlySales) {
         int numberAboveAverage = 0;
+        double average = calculateAverageSale(monthlySales);
         for (int sale : monthlySales) {
-            if (calculateAverageSale(monthlySales) < sale) {
+            if (average < sale) {
                 numberAboveAverage++;
             }
         }
